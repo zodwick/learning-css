@@ -158,3 +158,22 @@ img {
 width: 250px;
 height: 250px;
 }
+
+
+@keyframes color-rotate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.headingText{
+    font-size: 4rem;
+}
+.headingText:hover {
+    animation: color-rotate 5s;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+}
