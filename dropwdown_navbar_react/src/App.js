@@ -7,6 +7,7 @@ import { ReactComponent as CogIcon } from './icons/cog.svg';
 import { ReactComponent as ChevronIcon } from './icons/chevron.svg';
 import { ReactComponent as ArrowIcon } from './icons/arrow.svg';
 import { ReactComponent as BoltIcon } from './icons/bolt.svg';
+import { useState,react } from 'react';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <NavItem icon={<PlusIcon />} />
       <NavItem icon={<BellIcon />} />
       <NavItem icon={<MessengerIcon />} />
+      <NavItem icon={<CaretIcon />}>
+        <DropdownMenu></DropdownMenu>
+      </NavItem>
     </Navbar>
     );
 }
@@ -30,13 +34,24 @@ function Navbar(props)
 
 
 function NavItem(props){
+  const [open, setopen] = useState(false)
+
   return(
   <li className='nav-item'>
-    <a href="#" className='icon-button'>
+    <a href="#" className='icon-button' onClick={() => setopen(!open)}>
       {props.icon}
       </a>
+      {open && props.children}
+      
   </li>
   )
 }
+
+
+function DropdownMenu() {
+
+  
+}
+
 
 export default App;
