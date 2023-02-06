@@ -177,3 +177,7 @@ height: 250px;
     animation-iteration-count: infinite; 
     animation-direction: alternate;
 }
+
+.iframe{
+    height: 450px;
+}
