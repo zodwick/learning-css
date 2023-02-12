@@ -26,15 +26,25 @@ body {
 
 
 
+
 @keyframes spin {
     0%{
       transform: translateY(0px);
-      /* -webkit-transform: translateY(0px); */
+      -webkit-transform: translateY(0px);
     }
     100%{
       transform: translateY(-850px) rotate(360deg);
-      /* -webkit-transform: translateY(-850px) rotate(360deg); */
+      -webkit-transform: translateY(-850px) rotate(360deg);
     }
 }
 
 
+.smallBox {
+    min-width: 200%;
+    min-height: 225%;
+    border-radius: 30%;
+    position: absolute;
+    background-color: #ffefdb;
+    animation: spin 5s linear infinite;
+    z-index: 1;
+}
