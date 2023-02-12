@@ -46,7 +46,7 @@ body {
     position: absolute;
     background-color: #ffefdb;
     animation: spin 5s linear infinite;
-    z-index: 1;
-    animation-delay: calc(var(--scroll) * -1s);
+    /* z-index: 1; */
+    /* animation-delay: calc(var(--scroll) * -1s); */
 
 }
