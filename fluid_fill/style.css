@@ -3,7 +3,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffefdb;
+    background: #dbfff4;
     font-family: sans-serif;
-    color: #352a22;
+    color: rgb(3, 38, 48);
+}
+
+
+.mainbox {
+    width: 400px;
+    height: 400px;
+    border:rgb(213, 179, 166) 4px solid;
+    background-color: rgb(206 ,180 ,170 ,1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
