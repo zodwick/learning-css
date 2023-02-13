@@ -1,9 +1,11 @@
 body{
-    height: 500vh;
+    height: 200vh;
     margin: 0;
+    background: rgb(199, 155, 155);
 }
 
 .line_container{
+    padding: 1em;
     position: fixed;
     top: 0;
     left: 0;
