@@ -38,8 +38,22 @@
         path.style.strokeDashoffset = pathlength;
 
         window.addEventListener('scroll', function(){
-            let scrollpercent = (pathlength - window.scrollY) / pathlength;
-            path.style.strokeDashoffset = pathlength * scrollpercent;
+            let scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight); 
+            let draw = pathlength * scrollpercent;
+            path.style.strokeDashoffset = pathlength - draw;
+
+            let target = document.querySelector('.scroll');
+            var index=0 , length = target.length;
+            for(index; index < length; index++){
+                let rate = target[index].getAttribute('data-rate');
+                let direction = target[index].getAttribute('data-direction');
+                let scroll = window.pageYOffset * rate;
+                if(direction == 'vertical'){
+                    target[index].style.transform = 'translateY(' + scroll + 'px)';
+                }else{
+                    target[index].style.transform = 'translateX(' + scroll + 'px)';
+                }
+            }
         })
 
     </script>
