@@ -30,5 +30,18 @@
             Scroll Stuff
         </h1>
     </section>
+
+    <script>
+        let path = document.querySelector('path');
+        let pathlength = path.getTotalLength();
+        path.style.strokeDasharray = pathlength + ' ' + pathlength;
+        path.style.strokeDashoffset = pathlength;
+
+        window.addEventListener('scroll', function(){
+            let scrollpercent = (pathlength - window.scrollY) / pathlength;
+            path.style.strokeDashoffset = pathlength * scrollpercent;
+        })
+
+    </script>
 </body>
 </html>
