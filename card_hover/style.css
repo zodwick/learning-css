@@ -1,0 +1,54 @@
+:root {
+  --border: rgb(32, 171, 235);
+  --g1: rgb(98, 0, 234);
+  --g2: rgb(236, 64, 122);
+  --g3: rgb(253, 216, 53);
+}
+
+
+
+body{
+    background-color: rgb(10, 10, 10);
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    place-items: center;
+}
+
+.card{
+    border: 0.5vmin solid var(--border);
+    aspect-ratio: 1/1.6;
+    width: 56vmin;
+    position: relative;
+    cursor: pointer;
+
+
+}
+
+
+.card::before{
+    background: linear-gradient(
+        135deg,
+        transparent 0% 33%,
+        var(--g1),
+        var(--g2),
+        var(--g3)
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100% ;
+    width: 100%;
+    transition: background-position 350ms ease, transform 350ms ease;
+
+}
+
+
+.card:hover::before{
+    background-position: 100% 100%;
+    transform: scale(1.06,1.03);
+}
