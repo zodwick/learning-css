@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(80);
+  const [count, setCount] = useState(85);
   function increment() {
     // if (count == 99) {
     //   setCount(count + 1);
@@ -10,11 +10,13 @@ function App() {
     // } else {
       console.log("delay",count); 
       console.log(Math.round( (5+((-5/99)*count))));
-      if (Math.round( (5+((-5/99)*count))) === 0 ){
+      if (Math.round( (5+((-5/99)*count))) == 0 && count <= 99 ){
         console.log("cunt");
         setCount(count + 1);
       }
+      else{
       setCount(count +Math.round( (5+((-5/99)*count))));
+      }
     
   }
 
